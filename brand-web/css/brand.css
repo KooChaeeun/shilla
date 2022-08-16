@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header{
+	position:fixed;
+	width: 100%;
+	padding:20px;
+	text-align:center;
+	color:#fff;
+	top:0px;
+}
+p{
+	font-family:'Noto Sans KR' , sans-serif;
+}
+
+#menu li{
+	display:inline-block;
+	margin:0px 15px;
+	color:#000;
+}
+#menu li a{
+	text-decoration:none;
+	color:rgb(88, 88, 88);
+	padding:9px 20px;
+	display:block;
+	transition:all 1s;
+	position:relative;
+	letter-spacing:0px;
+}
+#menu li:hover a{
+	letter-spacing:3px;
+	font-weight:bold;
+}
+#menu li.active{ /*현재 선택된 메뉴의 스타일*/
+	border-bottom:1px solid #3E2C2C;
+}
+#menu li.active a{
+	color:#3E2C2C;
+	font-weight:bold;
+}
+
+
+/*섹션디자인*/
+svg {
+	margin-left:50%;
+	transform:translate(-50%);
+}
+#outline { 
+	fill:none;
+	stroke: white;
+	stroke-width: 0.5px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dashoffset: 1000;
+	stroke-dasharray: 1000;  /* 점선 만드는 속성 */
+	animation-name: drawline; /*선이 그려지는 애니메이션 지정*/
+	animation-duration: 15s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+#area {
+	fill: white;
+	fill-opacity: 0;
+	animation-name: fillarea; /* 투명도가 1이되는 애니메이션 지정 */
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes drawline {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes fillarea {
+	to {
+		fill-opacity: 1;
+	}
+}
+
+section:nth-child(1){
+	background:url("../img/pool.jpg")no-repeat;
+	background-size:cover;
+}
+.bx-wrapper {border:0;background:#fbfbfb;box-shadow:none;}
+
+/*sesc2*/
+#wrap{
+	width:1400px;
+	height:450px;
+	margin:auto;
+	position:relative;
+}
+
+.slide-group img{
+	width:866px;
+	height:434px;
+}
+
+.seoul{
+	position:relative;
+	left:0;
+}
+.seoul_box{
+	width:500px;
+	position:absolute;
+	right:0;
+	top:0;
+}
+h3{
+	font-family:'Noto Sans KR' , sans-serif;
+	color:#9B8D78;
+	font-weight:400;
+}
+h1{
+	font-size:40px;
+	padding:10 0px;
+	font-family:'Cormorant Garamond', serif;
+	margin-top:10px;
+}
+.line1{
+	width:400px;
+	height:3px;
+	background-color:#3E2C2C;
+	margin-top:10px;
+}
+/*
+.detail{
+	margin-top:7px;
+	color:#3E2C2C;
+}
+*/
+iframe{
+	margin-top:45px;
+}
+.info{
+	font-size:13px;
+	width:300px;
+	right:0;
+	position:relative;
+	margin-left:260px;
+	margin-top:-83px;
+}
+.info p{
+	padding:5px 0px;
+	color:rgb(94, 94, 94);
+	font-weight:lighter;
+}
+
+section:nth-child(3){
+	background:url("../img/li.jpg")no-repeat;
+	background-size:cover;
+}
+section:nth-child(4){
+	background:url("../img/wave.jpg")no-repeat;
+	background-size:cover;
+}
+section:nth-child(5){
+	background:url("../img/hoxy.jpg")no-repeat;
+	background-size:cover;
+}
+section:nth-child(6){
+	background:url("../img/som.jpg")no-repeat;
+	background-size:cover;
+}
+.seoul{
+	position:absolute;
+	right:0;
+}
+.address a{
+	color:rgb(133, 133, 133);
+	text-decoration:none;
+	font-weight:lighter;
+}
+.address:hover a{
+	color:#865009;
+}
+
+.section #seoul-drift{
+	position:absolute;
+	transition:all 2s;
+	left:-800px;
+	opacity:0; 
+
+}
+.section #seoul-drift.active{
+	left:0px;
+	opacity:1;
+}
+.seoul-detail p{
+	margin-top:7px;
+	color:white;
+	position:relative;
+	transition:all 3s;
+	
+}
+.seoul-detail p.active{
+	color:#3E2C2C;	
+}
+
+/*sec3*/
+.jeju_box{
+	width:500px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.jeju_box h3{
+	color:#64615d;
+}
+.section #jeju{
+	position:absolute;
+	right:-800px;
+	opacity:0;
+	transition:all 2s;
+}
+.section #jeju.active{
+	right:0px;
+	opacity:1;
+}
+.jeju-detail p{
+	margin-top:7px;
+	color:white;
+	position:relative;
+	transition:all 3s;
+}
+.jeju-detail p.active{
+	color:#3E2C2C;
+}
+
+/*sec4*/
+.info_mono{
+	font-size:13px;
+	width:300px;
+	right:0;
+	position:relative;
+	margin-left:260px;
+	margin-top:-100px;
+}
+.info_mono p{
+	padding:5px 0px;
+	color:rgb(133, 133, 133);
+	font-weight:lighter;
+}
+.section #mono-pics{
+	position:relative;
+	left:-800px;
+	opacity:0;
+	transition:all 2s;
+}
+.section #mono-pics.active{
+	left:0px;
+	opacity:1;
+}
+.mono-detail p{
+	margin-top:7px;
+	color:white;
+	position:relative;
+	transition:all 3s;
+}
+.mono-detail p.active{
+	color:#3E2C2C;
+}
+
+/*sec5*/
+.section #stay{
+	position:absolute;
+	right:-800px;
+	opacity:0;
+	transition:all 2s;
+}
+.section #stay.active{
+	right:0px;
+	opacity:1;
+}
+.stay-detail p{
+	margin-top:7px;
+	color:white;
+	position:relative;
+	transition:all 3s;
+}
+.stay-detail p.active{
+	color:#3E2C2C;
+}
